@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar *navbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="home">
+  <ion-item>
+    <ion-label>Inštrument</ion-label>
+  <ion-select #C (ionChange)="onChange(C.value)">
+    <ion-option value="kitara">Kitara</ion-option>
+    <ion-option value="bas">Bas</ion-option>
+    <ion-option value="bobni">Bobni</ion-option>
+    <ion-option value="vokal">Vokal</ion-option>
+    <ion-option value="klaviature">Klaviature</ion-option>
+    <ion-option value="flavta">flavta</ion-option>
+  </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let person of people" (click)='onClick(person.username,person.email);'>
+
+      <h2>{{person.username}} </h2>
+      <p>{{person.email}},{{person.city}}</p>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

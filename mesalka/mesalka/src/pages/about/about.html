@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Lokacije
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <ion-list>
+    <ion-item *ngFor="let location of locations">
+
+      <h2>{{location.ime}} </h2>
+      <p>{{location.lat}},{{location.long}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

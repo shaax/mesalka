@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Info
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="overflow: hidden;">
+  <div class="whiteSpace"></div>
+  <div class="headerWrapper">
+    <p class="messageWrapper">
+      {{user}}
+    </p>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col width-25>
+          <p  >
+            <ion-icon name="pin" style="font-size: 7em"></ion-icon>
+          </p>
+        </ion-col>
+        <ion-col width-10></ion-col>
+        <ion-col width-65>
+          <h2 class="locationNameWrapper">
+            {{mail}}
+          </h2>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <p class="locationDescriptionWrapper"  text-wrap >
+      location description
+    </p>
+
+
+  </div>
