@@ -13,10 +13,12 @@ import { DodajPage } from '../pages/dodaj/dodaj';
 import { GlasbenikPage } from '../pages/dodaj/glasbenik';
 import { SkupinaPage } from '../pages/dodaj/skupina';
 import { LokacijaPage } from '../pages/dodaj/lokacija';
+import { MapsPage } from '../pages/maps/maps';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+import { Geolocation } from '@ionic-native/geolocation';
 @NgModule({
   declarations: [
     MyApp,
@@ -29,7 +31,8 @@ import { HttpModule } from '@angular/http';
     DodajPage,
     GlasbenikPage,
     SkupinaPage,
-    LokacijaPage
+    LokacijaPage,
+    MapsPage
   ],
   imports: [
     BrowserModule,
@@ -48,11 +51,13 @@ import { HttpModule } from '@angular/http';
     DodajPage,
     GlasbenikPage,
     SkupinaPage,
-    LokacijaPage
+    LokacijaPage,
+    MapsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
