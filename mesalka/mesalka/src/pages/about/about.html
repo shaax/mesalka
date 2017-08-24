@@ -8,7 +8,7 @@
 
 <ion-content class="home">
   <ion-list>
-    <ion-item *ngFor="let location of locations">
+    <ion-item *ngFor="let location of locations" (click)='onClick(location.lat,location.long);'>
 
       <h2>{{location.ime}} </h2>
       <p>{{location.lat}},{{location.long}}</p>
